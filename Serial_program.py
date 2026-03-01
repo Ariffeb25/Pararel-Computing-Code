@@ -1,9 +1,8 @@
-# SERIAL COMPUTING (Single Core)
 
 import time
 import random
 
-# fungsi menghitung total (serial)
+
 def serial_sum(data):
     total = 0
     for num in data:
