@@ -2,9 +2,7 @@ import time
 import random
 from multiprocessing import Pool, cpu_count
 
-# =========================
-# SERIAL COMPUTING
-# =========================
+
 def serial_sum(data):
     total = 0
     for num in data:
@@ -12,9 +10,7 @@ def serial_sum(data):
     return total
 
 
-# =========================
-# PARALLEL COMPUTING
-# =========================
+
 def partial_sum(sub_array):
     total = 0
     for num in sub_array:
@@ -30,9 +26,7 @@ if __name__ == "__main__":
     print("Jumlah data:", N)
     print("Jumlah core CPU:", cpu_count())
 
-    # =========================
-    # SERIAL EXECUTION
-    # =========================
+   
     start = time.time()
     total_serial = serial_sum(data)
     end = time.time()
@@ -41,9 +35,7 @@ if __name__ == "__main__":
     print("Total:", total_serial)
     print("Waktu eksekusi:", end - start, "detik")
 
-    # =========================
-    # PARALLEL EXECUTION
-    # =========================
+    
     jumlah_core = cpu_count()
     chunk_size = len(data) // jumlah_core
 
